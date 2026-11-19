@@ -1,0 +1,81 @@
+
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body
+{
+    margin: 0;
+    background-color: #0D0B14;
+}
+
+#tabuleiro{
+    display: flex;
+    margin-top: 70px;
+    height: 600px;
+    width: 600px;
+    border: #FF4F7B, solid 1px;
+    box-shadow: 8px 8px 0 #FF4F7B;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+
+.pagina{
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #17131F;
+    border: solid 2px #2C2540;
+    padding: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+header p{
+    color: #F2EEE3;
+}
+.campo{
+    width: 200px;
+    height: 200px;
+    background-color: #17131F;
+    border: solid 2px #2C2540;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.campo:hover{
+    transform: scale(1.05);
+    z-index: 100;
+}
+
+@media (max-width: 680px), (max-height: 750px) {
+    #tabuleiro {
+        width: min(90vw, 75vh);
+        height: min(90vw, 75vh);
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .campo {
+        width: 33.333%;
+        height: 33.333%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #tabuleiro {
+        box-shadow: 4px 4px 0 #FF4F7B;
+    }
+}
