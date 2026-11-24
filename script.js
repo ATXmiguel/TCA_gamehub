@@ -39,6 +39,7 @@ for(let i = 0; i < 3; i++)
                 if(checkvit("X")===1)
                 {
                     vitoria = true;
+                    document.getElementById("resultado").innerHTML = "<img src='assets/vitoria_x.png'>";
                 }
             }
             else if(k % 2 != 0 && !(aux[i][j] === 'X' || aux[i][j] === 'O') && vitoria == false)
@@ -50,6 +51,7 @@ for(let i = 0; i < 3; i++)
                 if(checkvit("O")=== 1)
                 {
                     vitoria = true;
+                    document.getElementById("resultado").innerHTML = "<img src='assets/vitoria_o.png'>";
                 }
             }   
             
